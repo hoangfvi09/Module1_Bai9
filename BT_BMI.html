@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<p> Weight (kg)</p> <br>
+<input type="text" id="weight"><br>
+<p> Height (m) </p> <br>
+<input type="text" id="height"> <br>
+<button onclick="tinhbmi()">OK</button>
+<p id="bmi"></p>
+<script>
+    function tinhbmi() {
+        let x = +document.getElementById("weight").value
+        let y = +document.getElementById("height").value
+        let bmi = x / (y * y)
+
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+    }
+</script>
+</body>
+</html>
