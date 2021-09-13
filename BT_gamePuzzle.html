@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<body>
+<img src="1.png" id="tren" height="150" width="150" onclick="doianh('tren')">
+<img src="2.png" id="duoi" height="150" width="150" onclick="doianh('duoi')">
+<p id="result"></p>
+</body>
+<script>
+    let img1 = document.getElementById('tren');
+    let img2 = document.getElementById('duoi');
+
+    function doianh(id) {
+        let a = Math.floor(Math.random() * 6) + 1;
+        document.getElementById(id).src = a + '.png'
+        if (img1.src == img2.src) {
+            document.getElementById("result").innerHTML="đúng rùi";
+        }
+    }
+</script>
+</html>
